@@ -5,7 +5,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -62,7 +64,6 @@ class SpringappApplicationTests {
 
 	public void controllerfolder() {
 		String directoryPath = "src/main/java/com/examly/springapp/controller"; // Replace with the path to your
-																				// directory
 		File directory = new File(directoryPath);
 		assertTrue(directory.exists() && directory.isDirectory());
 	}
@@ -83,7 +84,7 @@ class SpringappApplicationTests {
 
 	@Test
 	public void testModelFile() {
-		String filePath = "src/main/java/com/examly/springapp/model/Book.java";
+		String filePath =  "src/main/java/com/examly/springapp/model/Book.java";
 		File file = new File(filePath);
 		assertTrue(file.exists() && file.isFile());
 	}
